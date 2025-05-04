@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8" />
+                <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1.0"
+                />
+                <title>Prince || Portfolio</title>
+                <style>
+                        * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                                font-family: "poppins", sans-serif;
+                        }
+
+                        html,
+                        body {
+                                height: 100%;
+                                width: 100%;
+                                background-color: #262626;
+                                color: #fff;
+                        }
+
+                        nav {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 1vw 3vw;
+                                background-color: #acbfa4;
+                                color: #262626;
+                                height: 6vw;
+                        }
+
+                        ul {
+                                display: flex;
+                                list-style: none;
+                                gap: 2vw;
+                        }
+
+                        .left {
+                                font-size: 1.5vw;
+                                font-weight: 600;
+                        }
+
+                        li a {
+                                font-size: 1vw;
+                                font-weight: 500;
+                                cursor: pointer;
+                                text-decoration: none;
+                                color: #262626;
+                                transition: all 0.3s ease-in-out;
+                                padding: 0.5vw 1vw;
+                                border-radius: 5px;
+                        }
+
+                        li a:hover {
+                                color: lavender;
+                                transition: all 0.3s ease-in-out;
+                        }
+
+                        .first {
+                                display: flex;
+                                justify-content: space-around;
+                                margin: 4vw 0;
+                                align-items: center;
+                        }
+
+                        .leftSection {
+                                width: 3.4vw;
+                                font-size: 2.5vw;
+                                margin: 3vw 0;
+                        }
+
+                        .rightSection {
+                                margin-top: 0;
+                                width: 3.4vw;
+                        }
+
+                        .first > div {
+                                width: 30%;
+                        }
+
+                        .rightSection img {
+                                width: 100%;
+                        }
+
+                        .purple {
+                                color: lightseagreen;
+                        }
+
+                        .text-gray {
+                                color: gray;
+                        }
+
+                        .leftSection div {
+                                font-size: 1.5vw;
+                                margin-top: 1vw;
+                        }
+
+                        #element {
+                                color: lightseagreen;
+                                font-size: 1.5vw;
+                                font-weight: 600;
+                        }
+
+                        .work-experience {
+                                max-width: 80vw;
+                                height: 80vh;
+                                margin: auto;
+                        }
+
+                        .work-experience h1 {
+                                font-size: 2vw;
+                                margin: 2vw 0;
+                        }
+                        hr {
+                                width: 100%;
+                                height: 0.1vw;
+                                background-color: #acbfa4;
+                                margin: 2vw 0;
+                        }
+
+                        .box {
+                                width: 80vw;
+                                height: 3px;
+                                background-color: #fff;
+                                margin: 5vw auto;
+                                display: flex;
+                        }
+
+                        .vertical {
+                                width: 3px;
+                                height: 10vh;
+                                background-color: #fff;
+                                margin: 0 150px;
+                        }
+
+                        .vertical-text {
+                                position: relative;
+                                top: 3vw;
+                                width: 8vw;
+                                font-weight: 600;
+                        }
+
+                        .vertical-desc {
+                                position: relative;
+                                top: 4vw;
+                                color: gray;
+                                width: 10vw;
+                                font-size: 9px;
+                        }
+
+                        .image-top {
+                                width: 3.4vw;
+                                position: relative;
+                                top: -3.6vw;
+                                left: -1vw;
+                        }
+
+                        /* Footer Styles */
+                        .footer {
+                                background-color: #1f1f1f;
+                                color: #fff;
+                                padding: 40px 20px;
+                                font-family: Arial, sans-serif;
+                        }
+
+                        .footer-container {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                                max-width: 1200px;
+                                margin: auto;
+                        }
+
+                        .footer-section {
+                                flex: 1 1 250px;
+                                margin: 20px 0;
+                        }
+
+                        .footer-logo {
+                                font-size: 24px;
+                                font-weight: bold;
+                                margin-bottom: 10px;
+                        }
+
+                        .footer-section h3 {
+                                font-size: 18px;
+                                margin-bottom: 10px;
+                        }
+
+                        .footer-section ul {
+                                list-style: none;
+                                padding: 0;
+                        }
+
+                        .footer-section ul li {
+                                margin-bottom: 8px;
+                        }
+
+                        .footer-section a {
+                                color: #ccc;
+                                text-decoration: none;
+                                transition: color 0.3s;
+                        }
+
+                        .footer-section a:hover {
+                                color: #fff;
+                        }
+
+                        .social-links a {
+                                margin-right: 15px;
+                                color: #ccc;
+                                text-decoration: none;
+                        }
+
+                        /* Media Queries for Responsive Design */
+                        @media (max-width: 768px) {
+                                nav {
+                                        flex-direction: column;
+                                        height: auto;
+                                        padding: 15px;
+                                }
+
+                                .right ul {
+                                        flex-direction: column;
+                                        text-align: center;
+                                        gap: 15px;
+                                }
+
+                                .first {
+                                        flex-direction: column-reverse;
+                                        text-align: center;
+                                }
+
+                                .leftSection,
+                                .rightSection {
+                                        width: 90%;
+                                        margin: auto;
+                                }
+
+                                .work-experience {
+                                        height: auto;
+                                }
+
+                                .box {
+                                        flex-direction: column;
+                                        height: auto;
+                                }
+
+                                .vertical {
+                                        margin: 20px auto;
+                                        height: auto;
+                                }
+
+                                .vertical-text,
+                                .vertical-desc {
+                                        width: auto;
+                                        text-align: center;
+                                }
+
+                                .footer-container {
+                                        flex-direction: column;
+                                        text-align: center;
+                                }
+
+                                .footer-section {
+                                        margin: 20px auto;
+                                }
+
+                                .social-links a {
+                                        display: block;
+                                        margin: 10px 0;
+                                }
+                        }
+
+                        .footer-bottom {
+                                text-align: center;
+                                padding-top: 20px;
+                                font-size: 14px;
+                                color: #aaa;
+                                border-top: 1px solid #333;
+                                margin-top: 30px;
+                        }
+
+                        .leftSection .btn {
+                                padding: 12px;
+                                background: transparent;
+                                color: #fff;
+                                font-size: large;
+                                border: 2px solid #fff;
+                                border-radius: 6px;
+                                cursor: pointer;
+                        }
+                </style>
+        </head>
+        <body>
+                <header>
+                        <nav>
+                                <div class="left">Prince's Portfolio</div>
+                                <div class="right">
+                                        <ul>
+                                                <li><a href="/">Home </a></li>
+                                                <li><a href="/">About </a></li>
+                                                <li>
+                                                        <a href="/"
+                                                                >Services
+                                                        </a>
+                                                </li>
+                                                <li>
+                                                        <a href="/"
+                                                                >Projects
+                                                        </a>
+                                                </li>
+                                                <li>
+                                                        <a href="/"
+                                                                >Contact me
+                                                        </a>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </nav>
+                </header>
+                <main>
+                        <section class="first">
+                                <div class="leftSection">
+                                        Hi, My name is
+                                        <span class="purple">Prince</span>.
+                                        <br />
+                                        <span id="element"></span>
+                                        <div class="buttons">
+                                                <button class="btn">
+                                                        Download Resume
+                                                </button>
+                                                <button class="btn">
+                                                        Visit Github
+                                                </button>
+                                        </div>
+                                        <div>
+                                                and I am a professional <br />
+                                                web developer
+                                        </div>
+                                </div>
+                                <div class="rightSection">
+                                        <img src="./illustration.png" alt="" />
+                                </div>
+                        </section>
+
+                        <hr />
+                        <section class="work-experience">
+                                <span class="text-gray"
+                                        >What I have done so far</span
+                                >
+                                <h1>Work Experience</h1>
+                                <div class="box">
+                                        <div class="vertical">
+                                                <img
+                                                        class="image-top"
+                                                        src="./html logo.png"
+                                                        alt=""
+                                                />
+                                                <div class="vertical-text">
+                                                        HTML Developer (2010 -
+                                                        2012)
+                                                </div>
+                                                <div class="vertical-desc">
+                                                        Lorem ipsum, dolor sit
+                                                        amet consectetur
+                                                        adipisicing elit.
+                                                        Asperiores debitis
+                                                        consectetur,
+                                                        perspiciatis mollitia
+                                                        magni quam unde beatae
+                                                        possimus! Alias, tempore
+                                                        veniam deleniti
+                                                        explicabo facilis
+                                                        corporis vel molestiae
+                                                        obcaecati tenetur
+                                                        distinctio.
+                                                </div>
+                                        </div>
+                                        <div class="vertical">
+                                                <img
+                                                        class="image-top"
+                                                        src="./css logo.png"
+                                                        alt=""
+                                                />
+                                                <div class="vertical-text">
+                                                        CSS Developer (2012 -
+                                                        2015)
+                                                </div>
+                                                <div class="vertical-desc">
+                                                        Lorem ipsum, dolor sit
+                                                        amet consectetur
+                                                        adipisicing elit.
+                                                        Asperiores debitis
+                                                        consectetur,
+                                                        perspiciatis mollitia
+                                                        magni quam unde beatae
+                                                        possimus! Alias, tempore
+                                                        veniam deleniti
+                                                        explicabo facilis
+                                                        corporis vel molestiae
+                                                        obcaecati tenetur
+                                                        distinctio.
+                                                </div>
+                                        </div>
+                                        <div class="vertical">
+                                                <img
+                                                        class="image-top"
+                                                        src="./JavaScript-logo.png"
+                                                        alt=""
+                                                />
+                                                <div class="vertical-text">
+                                                        JAVASCRIPT Developer
+                                                        (2016 - 2020)
+                                                </div>
+                                                <div class="vertical-desc">
+                                                        Lorem ipsum, dolor sit
+                                                        amet consectetur
+                                                        adipisicing elit.
+                                                        Asperiores debitis
+                                                        consectetur,
+                                                        perspiciatis mollitia
+                                                        magni quam unde beatae
+                                                        possimus! Alias, tempore
+                                                        veniam deleniti
+                                                        explicabo facilis
+                                                        corporis vel molestiae
+                                                        obcaecati tenetur
+                                                        distinctio.
+                                                </div>
+                                        </div>
+                                        <div class="vertical">
+                                                <img
+                                                        class="image-top"
+                                                        src="./react logo.png"
+                                                        alt=""
+                                                />
+                                                <div class="vertical-text">
+                                                        REACT Developer (2020 -
+                                                        2023)
+                                                </div>
+                                                <div class="vertical-desc">
+                                                        Lorem ipsum, dolor sit
+                                                        amet consectetur
+                                                        adipisicing elit.
+                                                        Asperiores debitis
+                                                        consectetur,
+                                                        perspiciatis mollitia
+                                                        magni quam unde beatae
+                                                        possimus! Alias, tempore
+                                                        veniam deleniti
+                                                        explicabo facilis
+                                                        corporis vel molestiae
+                                                        obcaecati tenetur
+                                                        distinctio.
+                                                </div>
+                                        </div>
+                                        <div class="vertical">
+                                                <img
+                                                        class="image-top"
+                                                        src="./tailwind logo.png"
+                                                        alt=""
+                                                />
+                                                <div class="vertical-text">
+                                                        TAILWIND CSS Developer
+                                                        (2023 - 2024)
+                                                </div>
+                                                <div class="vertical-desc">
+                                                        Lorem ipsum, dolor sit
+                                                        amet consectetur
+                                                        adipisicing elit.
+                                                        Asperiores debitis
+                                                        consectetur,
+                                                        perspiciatis mollitia
+                                                        magni quam unde beatae
+                                                        possimus! Alias, tempore
+                                                        veniam deleniti
+                                                        explicabo facilis
+                                                        corporis vel molestiae
+                                                        obcaecati tenetur
+                                                        distinctio.
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+                </main>
+
+                <footer class="footer">
+                        <div class="footer-container">
+                                <!-- Logo / About -->
+                                <div class="footer-section">
+                                        <h2 class="footer-logo">
+                                                Prince's Portfolio
+                                        </h2>
+                                        <p>
+                                                Bringing ideas to life with
+                                                modern web tech.
+                                        </p>
+                                </div>
+
+                                <!-- Links -->
+                                <div class="footer-section">
+                                        <h3>Quick Links</h3>
+                                        <ul>
+                                                <li><a href="#">Home</a></li>
+                                                <li><a href="#">About</a></li>
+                                                <li>
+                                                        <a href="#">Services</a>
+                                                </li>
+                                                <li><a href="#">Contact</a></li>
+                                        </ul>
+                                </div>
+
+                                <!-- Social Media -->
+                                <div class="footer-section">
+                                        <h3>Follow Us</h3>
+                                        <div class="social-links">
+                                                <a href="#">Facebook</a>
+                                                <a href="#">Twitter</a>
+                                                <a href="#">GitHub</a>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="footer-bottom">
+                                © 2025 MyWebsite. All rights reserved.
+                        </div>
+                </footer>
+
+                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+                <script>
+                        var typed = new Typed("#element", {
+                                strings: [
+                                        "I am a web designer",
+                                        "I am a web developer",
+                                        "I am a web engineer",
+                                ],
+                                typeSpeed: 100,
+                        });
+                </script>
+                <script>
+                        // Add smooth scrolling to navigation links
+                        document.querySelectorAll("nav a").forEach((anchor) => {
+                                anchor.addEventListener("click", function (e) {
+                                        e.preventDefault();
+                                        document.querySelector(
+                                                this.getAttribute("href")
+                                        ).scrollIntoView({
+                                                behavior: "smooth",
+                                        });
+                                });
+                        });
+
+                        // Add button click handlers
+                        document.querySelectorAll(".btn").forEach((button) => {
+                                button.addEventListener("click", function () {
+                                        if (
+                                                this.textContent ===
+                                                "Download Resume"
+                                        ) {
+                                                // Add resume download logic here
+                                                console.log(
+                                                        "Downloading resume..."
+                                                );
+                                        } else if (
+                                                this.textContent ===
+                                                "Visit Github"
+                                        ) {
+                                                window.open(
+                                                        "https://github.com/yourusername",
+                                                        "_blank"
+                                                );
+                                        }
+                                });
+                        });
+
+                        // Add hover effects to work experience boxes
+                        document.querySelectorAll(".vertical").forEach(
+                                (box) => {
+                                        box.addEventListener(
+                                                "mouseenter",
+                                                function () {
+                                                        this.style.transform =
+                                                                "scale(1.05)";
+                                                        this.style.transition =
+                                                                "transform 0.5s ease";
+                                                }
+                                        );
+                                        box.addEventListener(
+                                                "mouseleave",
+                                                function () {
+                                                        this.style.transform =
+                                                                "scale(1)";
+                                                }
+                                        );
+                                }
+                        );
+                </script>
+        </body>
+</html>
